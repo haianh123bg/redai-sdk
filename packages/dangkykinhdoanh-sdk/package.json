@@ -1,0 +1,45 @@
+{
+  "name": "@redonvn/dangkykinhdoanh-sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for dangkykinhdoanh.gov.vn enterprise search with response parser",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./utils/response-parser": {
+      "require": "./dist/utils/response-parser.js",
+      "import": "./dist/utils/response-parser.mjs",
+      "types": "./dist/utils/response-parser.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "dangkykinhdoanh",
+    "vietnam",
+    "enterprise",
+    "business",
+    "tax",
+    "sdk"
+  ],
+  "author": "Redon",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.9"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
