@@ -1,40 +1,44 @@
 import axios, { type AxiosInstance, type AxiosRequestConfig, type AxiosResponse } from "axios";
 
-export interface MstClientOptions {
+export interface TimkiemDoanhnghiepClientOptions {
   baseUrl?: string;
   axios?: AxiosInstance;
   headers?: Record<string, string>;
   timeoutMs?: number;
 }
 
-export class MstError extends Error {
+export class TimkiemDoanhnghiepError extends Error {
   status?: number;
   body?: unknown;
 
   constructor(message: string, options?: { status?: number; body?: unknown }) {
     super(message);
-    this.name = "MstError";
+    this.name = "TimkiemDoanhnghiepError";
     this.status = options?.status;
     this.body = options?.body;
   }
 }
 
-export class MstClient {
+export class TimkiemDoanhnghiepClient {
   private axios: AxiosInstance;
   private headers?: Record<string, string>;
   readonly baseUrl: string;
 
-  constructor(options: MstClientOptions = {}) {
-    const baseUrl = options.baseUrl ?? options.axios?.defaults.baseURL ?? "https://mst.8686.vn";
+  constructor(options: TimkiemDoanhnghiepClientOptions = {}) {
+    const baseUrl =
+      options.baseUrl ??
+      options.axios?.defaults.baseURL ??
+      "https://timkiemdoanhnghiep.com";
 
     this.baseUrl = baseUrl.replace(/\/$/, "");
     this.headers = options.headers;
-    this.axios = options.axios ??
+    this.axios =
+      options.axios ??
       axios.create({
         baseURL: this.baseUrl,
         timeout: options.timeoutMs,
         headers: {
-          Accept: "application/json",
+          Accept: "text/html,application/xhtml+xml",
           ...options.headers
         }
       });
@@ -57,13 +61,13 @@ export class MstClient {
       return await this.axios.request<T>({
         ...config,
         headers: {
-          Accept: "application/json",
+          Accept: "text/html,application/xhtml+xml",
           ...this.headers,
           ...config.headers
         }
       });
     } catch (err: unknown) {
-      throw toMstError(err);
+      throw toTimkiemDoanhnghiepError(err);
     }
   }
 
@@ -79,21 +83,30 @@ export class MstClient {
       url: this.buildUrl(path)
     });
   }
+
+  async getText(path: string, config?: AxiosRequestConfig): Promise<string> {
+    return this.request<string>({
+      ...config,
+      method: "GET",
+      url: this.buildUrl(path),
+      responseType: "text"
+    });
+  }
 }
 
-function toMstError(err: unknown): MstError {
+function toTimkiemDoanhnghiepError(err: unknown): TimkiemDoanhnghiepError {
   if (axios.isAxiosError(err)) {
     const status = err.response?.status;
     const body = err.response?.data ?? err.message;
     const message = status
       ? `Request failed with status ${status}`
       : "Request failed";
-    return new MstError(message, { status, body });
+    return new TimkiemDoanhnghiepError(message, { status, body });
   }
 
-  if (err instanceof MstError) {
+  if (err instanceof TimkiemDoanhnghiepError) {
     return err;
   }
 
-  return new MstError("Request failed", { body: err });
+  return new TimkiemDoanhnghiepError("Request failed", { body: err });
 }
