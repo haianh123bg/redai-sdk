@@ -1,6 +1,6 @@
 {
     "name": "@redonvn/tracuu-vin-hoadon-sdk",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "TracuuVinHoadon invoice lookup SDK",
     "keywords": [
         "tracuu",

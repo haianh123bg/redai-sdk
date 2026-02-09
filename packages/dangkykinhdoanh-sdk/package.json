@@ -1,6 +1,6 @@
 {
   "name": "@redonvn/dangkykinhdoanh-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TypeScript SDK for dangkykinhdoanh.gov.vn enterprise search with response parser",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
