@@ -1,0 +1,42 @@
+﻿{
+  "name": "@redonvn/sepay-hub-sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK cho SePay Bank Hub API v1",
+  "keywords": [
+    "sepay",
+    "bank-hub",
+    "payment",
+    "sdk",
+    "project03"
+  ],
+  "license": "MIT",
+  "author": "Redon",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "docs"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "tsup --clean",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "axios": "^1.7.2"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "generic-sdk-api",
+  "version": "0.1.0",
+  "description": "Generic TypeScript SDK scaffolder and API generator",
+  "type": "commonjs",
+  "bin": {
+    "generic-sdk-api": "dist/cli.js"
+  },
+  "main": "dist/cli.js",
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist',{ recursive: true, force: true })\"",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "type-check": "npm run typecheck",
+    "lint": "tsc --noEmit -p tsconfig.json",
+    "dev": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "tsx": "^4.20.5",
+    "typescript": "^5.4.5"
+  },
+  "prepublishOnly": "npm run build"
+}

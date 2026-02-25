@@ -1,0 +1,133 @@
+{
+  "generatedAt": "2026-02-16T17:48:22.201Z",
+  "pages": [
+    {
+      "title": "Module: executor/axios-executor.ts",
+      "source": "src/executor/axios-executor.ts",
+      "doc": "executor/axios-executor.md",
+      "lines": 1023,
+      "exports": 3,
+      "imports": 9
+    },
+    {
+      "title": "Module: facade/index.ts",
+      "source": "src/facade/index.ts",
+      "doc": "facade/index.md",
+      "lines": 125,
+      "exports": 5,
+      "imports": 8
+    },
+    {
+      "title": "Module: generators/google-tool-generator.ts",
+      "source": "src/generators/google-tool-generator.ts",
+      "doc": "generators/google-tool-generator.md",
+      "lines": 21,
+      "exports": 2,
+      "imports": 2
+    },
+    {
+      "title": "Module: generators/openai-tool-generator.ts",
+      "source": "src/generators/openai-tool-generator.ts",
+      "doc": "generators/openai-tool-generator.md",
+      "lines": 27,
+      "exports": 2,
+      "imports": 2
+    },
+    {
+      "title": "Module: importers/index.ts",
+      "source": "src/importers/index.ts",
+      "doc": "importers/index.md",
+      "lines": 3,
+      "exports": 2,
+      "imports": 0
+    },
+    {
+      "title": "Module: importers/openapi-importer.ts",
+      "source": "src/importers/openapi-importer.ts",
+      "doc": "importers/openapi-importer.md",
+      "lines": 675,
+      "exports": 4,
+      "imports": 3
+    },
+    {
+      "title": "Module: importers/postman-importer.ts",
+      "source": "src/importers/postman-importer.ts",
+      "doc": "importers/postman-importer.md",
+      "lines": 645,
+      "exports": 3,
+      "imports": 4
+    },
+    {
+      "title": "Module: index.ts",
+      "source": "src/index.ts",
+      "doc": "index.md",
+      "lines": 17,
+      "exports": 13,
+      "imports": 0
+    },
+    {
+      "title": "Module: types/auth.ts",
+      "source": "src/types/auth.ts",
+      "doc": "types/auth.md",
+      "lines": 196,
+      "exports": 24,
+      "imports": 0
+    },
+    {
+      "title": "Module: types/execution.ts",
+      "source": "src/types/execution.ts",
+      "doc": "types/execution.md",
+      "lines": 34,
+      "exports": 6,
+      "imports": 0
+    },
+    {
+      "title": "Module: types/ir.ts",
+      "source": "src/types/ir.ts",
+      "doc": "types/ir.md",
+      "lines": 132,
+      "exports": 15,
+      "imports": 2
+    },
+    {
+      "title": "Module: types/schema.ts",
+      "source": "src/types/schema.ts",
+      "doc": "types/schema.md",
+      "lines": 50,
+      "exports": 3,
+      "imports": 0
+    },
+    {
+      "title": "Module: types/workflow.ts",
+      "source": "src/types/workflow.ts",
+      "doc": "types/workflow.md",
+      "lines": 18,
+      "exports": 3,
+      "imports": 0
+    },
+    {
+      "title": "Module: utils/masking.ts",
+      "source": "src/utils/masking.ts",
+      "doc": "utils/masking.md",
+      "lines": 44,
+      "exports": 3,
+      "imports": 0
+    },
+    {
+      "title": "Module: utils/schema-to-jsonschema.ts",
+      "source": "src/utils/schema-to-jsonschema.ts",
+      "doc": "utils/schema-to-jsonschema.md",
+      "lines": 109,
+      "exports": 3,
+      "imports": 1
+    },
+    {
+      "title": "Module: utils/variable-resolver.ts",
+      "source": "src/utils/variable-resolver.ts",
+      "doc": "utils/variable-resolver.md",
+      "lines": 51,
+      "exports": 4,
+      "imports": 0
+    }
+  ]
+}

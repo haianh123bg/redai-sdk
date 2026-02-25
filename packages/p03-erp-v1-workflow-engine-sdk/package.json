@@ -1,0 +1,37 @@
+{
+  "name": "@redonvn/p03-erp-v1-workflow-engine-sdk",
+  "version": "0.1.0",
+  "description": "Workflow engine SDK cho Project03 ERP v1",
+  "keywords": [
+    "project03",
+    "erp",
+    "workflow",
+    "sdk"
+  ],
+  "license": "MIT",
+  "author": "Redon",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "tsup --clean",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

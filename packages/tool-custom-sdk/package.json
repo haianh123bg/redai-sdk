@@ -1,0 +1,56 @@
+﻿{
+  "name": "tool-custom-sdk",
+  "version": "0.3.2",
+  "description": "Stateless SDK chuẩn hóa OpenAPI/Postman sang tool schema và HTTP executor",
+  "keywords": [
+    "project03",
+    "erp",
+    "tool",
+    "openapi",
+    "postman",
+    "mcp"
+  ],
+  "license": "MIT",
+  "author": "Redon",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "clean": "tsup --clean",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "npm run verify:no-legacy && eslint \"src/index.ts\" \"src/facade/**/*.ts\" \"src/importers/**/*.ts\" \"src/generators/**/*.ts\" \"src/executor/**/*.ts\" \"src/utils/**/*.ts\" \"src/types/**/*.ts\"",
+    "lint:fix": "eslint \"src/index.ts\" \"src/facade/**/*.ts\" \"src/importers/**/*.ts\" \"src/generators/**/*.ts\" \"src/executor/**/*.ts\" \"src/utils/**/*.ts\" \"src/types/**/*.ts\" --fix",
+    "docs:generate": "node tools/generate-docs.js",
+    "verify:no-legacy": "node tools/check-no-legacy.js"
+  },
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "axios": "^1.6.7",
+    "form-data": "^4.0.0",
+    "yaml": "^2.4.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.46.0",
+    "@typescript-eslint/parser": "^8.46.0",
+    "@types/form-data": "^2.5.2",
+    "@types/node": "^20.11.0",
+    "eslint": "^9.37.0"
+  }
+}

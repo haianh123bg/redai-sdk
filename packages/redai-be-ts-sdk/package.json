@@ -1,0 +1,58 @@
+{
+  "name": "@redonvn/redai-backend-api-sdk",
+  "version": "0.1.22",
+  "description": "Axios SDK for RedAI Dynamic Table APIs",
+  "license": "UNLICENSED",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./generated": {
+      "types": "./dist/generated/index.d.ts",
+      "require": "./dist/generated/index.js",
+      "default": "./dist/generated/index.js"
+    },
+    "./generated/*": {
+      "types": "./dist/generated/*.d.ts",
+      "require": "./dist/generated/*.js",
+      "default": "./dist/generated/*.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist',{ recursive: true, force: true })\"",
+    "generate": "cross-env GEN_MODE=hybrid OUTPUT_REPORT=true tsx tools/generate-dynamic-table-sdk.ts",
+    "generate:sdk": "tsx tools/generate-sdk.ts",
+    "generate:ts": "cross-env GEN_MODE=ts OUTPUT_REPORT=true tsx tools/generate-dynamic-table-sdk.ts",
+    "generate:openapi": "cross-env GEN_MODE=openapi OUTPUT_REPORT=true tsx tools/generate-dynamic-table-sdk.ts",
+    "generate:report": "cross-env GEN_MODE=hybrid OUTPUT_REPORT=true tsx tools/generate-dynamic-table-sdk.ts",
+    "verify:generated": "tsx tools/verify-generated.ts --module=dynamic-table --pathPrefix=/v1/dynamic-table --backendRoot=F:\\Redon\\DuAn\\project01\\true --controllersDir=src/modules/dynamic-table/controllers",
+    "typecheck": "tsc --noEmit",
+    "type-check": "npm run typecheck",
+    "lint": "tsc --noEmit -p tsconfig.json",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "axios": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "cross-env": "^7.0.3",
+    "tsx": "^4.20.5",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RedAI - Nền Tảng Agentic AI</title>
+  <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+  <!--
+    ==========================================
+    REDAI CHAT WIDGET CONFIGURATION
+    ==========================================
+    Script này khởi tạo RedAI Chat Widget với các cấu hình tùy chỉnh
+
+    📋 GIẢI THÍCH CHI TIẾT CÁC THUỘC TÍNH:
+
+    🔧 CẤU HÌNH CƠ BẢN:
+    • data-redai-chat: Đánh dấu đây là RedAI Chat Widget
+    • data-auto-init="true": Tự động khởi tạo widget khi trang load
+    • data-api-key="DEMO_API_KEY": Khóa API để kết nối với backend RedAI
+
+    📍 VỊ TRÍ HIỂN THỊ:
+    • data-position="center": Vị trí widget
+      - "center": Giữa màn hình (khi corner mode thì nút ở giữa dưới)
+      - "bottom-right": Góc phải dưới
+      - "bottom-left": Góc trái dưới
+
+    🎨 GIAO DIỆN:
+    • data-primary-color="#6600FF": Màu chủ đạo (tím)
+    • data-title="RedAI": Tiêu đề hiển thị trên header
+    • data-greeting="...": Lời chào đầu tiên của bot
+    • data-dark-mode="true": Bật chế độ tối (true/false)
+    • data-adaptive-colors="true": Tự động điều chỉnh màu theo website
+
+    👤 AVATAR & ICON:
+    • data-avatar-url="...": Link ảnh đại diện của bot
+    • data-corner-button-icon="...": Icon cho nút corner (khi display-mode="corner")
+
+    🎭 CHẾ ĐỘ HIỂN THỊ:
+    • data-display-mode="corner": Chế độ hiển thị
+      - "corner": Hiển thị nút nhỏ ở góc, click để mở chat
+      - "center": Hiển thị widget chat ngay giữa màn hình
+
+    💡 VÍ DỤ CẤU HÌNH NHANH:
+
+    Corner Mode (Nút ở góc):
+    data-display-mode="corner" + data-position="bottom-right"
+
+    Center Mode (Chat ở giữa):
+    data-display-mode="center" + data-position="center"
+    -->
+  <!-- <script src="https://cdn.redai.vn/live-chat/v1/redai-chat-widget.js"
+    data-key="redai_eyJpdiI6ImIxYjdkZTBkYTliMzc3NjNkZDRlNDYyYTg1MDhkNDZiIiwiYXV0aFRhZyI6ImQ4NmY3MmM0ZmEzMTUxZmViNmYyM2I4NmI3MGI5ZDU0IiwiZW5jcnlwdGVkIjoiYzQ3MmJmMjgwOWUyMTMxZGI3YjY1YmFhZjdkNzE3NDdhMDQ5N2MwZjBmOTRkN2IzMWQ2ZGFmOTY4YjZhMmMwNjNjNzZhZWIxN2YwNTJhYzYzMmE0YzY4YjgwZjg2ZjI4MTViOWM1Y2JlZjdmNzM1N2ZmMTg0YTYyYzUyYjJiMzgxYmMwZTZhZDM3Mzg1YjE1MzAwNjNmZTNjNmU1ZjU1YjY2YmVhMzk1In0="></script> -->
+  <script type="module" crossorigin src="/assets/index-DaanNvUP.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BRtoNEz2.css">
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>
